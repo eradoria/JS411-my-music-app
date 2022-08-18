@@ -1,24 +1,17 @@
-import * as React from "react";
+import React from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectQuality(props) {
-  const {
-    title,
-    body,
-    state,
-    setState,
-    component: Component,
-    handlechange: handleChange,
-  } = props;
+export default function MusicQuality(props) {
+  const { isQuality, setQuality } = props;
 
-  //   const [quality, setQuality] = React.useState("");
-
-  //   const handleChange = (event) => {
-  //     setQuality(event.target.value);
-  //   };
+  const handleQualityChange = (e) => {
+    // let { value } = event.target;
+    // console.log(state);
+    setQuality(e.target.value);
+  };
 
   return (
     <div>
@@ -27,8 +20,8 @@ export default function SelectQuality(props) {
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
-          value={state}
-          onChange={handleChange}
+          value={isQuality}
+          onChange={handleQualityChange}
           autoWidth
           label="Quality"
         >

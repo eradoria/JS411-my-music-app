@@ -5,7 +5,7 @@ import { Slider } from "@mui/material";
 
 
 export default function Volume(props) {
-  const { tate, setState } = props;
+  const { state, setState } = props;
   return (
     <Box sx={{ width: 300 }}>
       <Slider
